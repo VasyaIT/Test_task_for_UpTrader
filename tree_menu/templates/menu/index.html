@@ -5,6 +5,7 @@
 {% load menu_tags %}
 {% block main %}
 
+{% if not menus %}<h1>Add the first menu!</h1>{% endif %}
 {% for menu in menus %}
     {% draw_menu menu.title %}
 {% endfor %}
