@@ -16,7 +16,7 @@ class Menu(models.Model):
 class Subject(models.Model):
     title = models.CharField(max_length=255, verbose_name='subject title', help_text='Enter the name of Subject')
     slug = models.SlugField(max_length=255, verbose_name="subject slug", help_text='URL')
-    menu = models.ForeignKey(Menu, blank=True, related_name='subjects', on_delete=models.CASCADE)
+    menu = models.ForeignKey(Menu, blank=False, null=False, related_name='subjects', on_delete=models.CASCADE)
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
 
     class Meta:
