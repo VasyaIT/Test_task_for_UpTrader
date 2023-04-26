@@ -1,0 +1,17 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    docs/source/conf.py,
+    old,
+    build,
+    dist,
+    */venv/*,
+    */.idea/*,
+    .env,
+    */migrations/*,
+    db.sqlite3,
+    venv/,
+max-complexity = 10
+max-line-length = 120
+ignore = F401

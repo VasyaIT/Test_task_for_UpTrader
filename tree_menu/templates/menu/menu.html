@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-dark">
+<ul>
+
+    {% for sub in subjects %}
+        <li class="nav-item">
+            <a href="?{{ others }}&{{ menu }}={{ sub.id }}">{{ sub.title }}</a>
+        </li>
+        {% if sub.child_subjects %}
+            {% include 'menu/menu.html' with subjects=sub.child_subjects %}
+        {% endif %}
+    {% endfor %}
+
+</ul>
+</nav>

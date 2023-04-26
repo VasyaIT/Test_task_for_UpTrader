@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} UpTrader {% endblock %}
+
+{% load menu_tags %}
+{% block main %}
+
+{% for menu in menus %}
+    {% draw_menu menu.title %}
+{% endfor %}
+
+{% endblock %}
